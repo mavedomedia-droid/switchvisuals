@@ -47,7 +47,7 @@
             --section-padding: 4rem 1.5rem;
             --radius-card: 12px;
             --radius-btn: 6px;
-            --topbar-h: 48px;
+            --topbar-h: 52px;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -114,16 +114,16 @@
             position: sticky; top: 0; z-index: 900;
             height: var(--topbar-h);
             display: flex; align-items: center; justify-content: space-between;
-            padding: 0 1.25rem;
+            padding: 0 1rem;
             background: rgba(10, 10, 11, 0.82);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(212, 167, 44, 0.12);
         }
-        .topbar-brand {
-            font-family: var(--font-heading); font-size: 0.7rem; font-weight: 600;
-            letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream);
-            white-space: nowrap;
+        .topbar-logo {
+            height: 28px;
+            width: auto;
+            object-fit: contain;
         }
         .topbar-meta { display: flex; align-items: center; gap: 0.85rem; }
         .topbar-date {
@@ -138,7 +138,7 @@
         }
         .topbar-cta:hover { opacity: 1; box-shadow: 0 3px 12px rgba(212, 167, 44, 0.3); }
 
-        /* ===== HERO (clean flow: poster, wordmark, buttons) ===== */
+        /* ===== HERO ===== */
         .hero {
             padding: 2rem 1.25rem 2.5rem;
             background:
@@ -150,24 +150,25 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
-            max-width: 520px;
+            gap: 1.25rem;
+            max-width: 560px;
             margin: 0 auto;
         }
         .hero-poster-wrap {
             width: 100%;
-            max-width: 220px;
+            max-width: 300px;  /* larger poster on mobile */
             margin-bottom: 0.5rem;
         }
         .hero-poster {
             width: 100%;
             aspect-ratio: 3 / 4;
-            border-radius: 12px;
-            border: 1px solid rgba(212, 167, 44, 0.18);
+            border-radius: 14px;
+            border: 1px solid rgba(212, 167, 44, 0.22);
             overflow: hidden;
             box-shadow:
-                0 20px 40px -12px rgba(0, 0, 0, 0.8),
-                0 8px 16px -6px rgba(0, 0, 0, 0.6);
+                0 24px 48px -12px rgba(0, 0, 0, 0.85),
+                0 10px 20px -8px rgba(0, 0, 0, 0.7),
+                0 0 80px rgba(212, 167, 44, 0.08);
         }
         .hero-poster img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -177,13 +178,7 @@
             flex-direction: column;
             align-items: center;
             gap: 0.6rem;
-        }
-        .hero-content .title-image-wrap { max-width: 100%; margin: 0; }
-        .hero-content .title-image-wrap img {
             width: 100%;
-            height: auto;
-            max-width: 200px;
-            margin: 0 auto;
         }
 
         .hero-tagline {
@@ -215,7 +210,7 @@
             flex-direction: column;
             gap: 0.5rem;
             width: 100%;
-            max-width: 280px;
+            max-width: 300px;
             margin-top: 0.3rem;
         }
         .hero-cta-group .btn {
@@ -283,15 +278,13 @@
         .cinema-cta-content { max-width: 600px; margin: 0 auto; }
         .cinema-cta-content h2 { margin-bottom: 0.5rem; }
         .cinema-cta-content .lead { font-size: 0.85rem; color: rgba(244, 232, 208, 0.7); margin: 0 auto 0.75rem; max-width: 380px; }
-        .cinema-cta-content .title-image-wrap { max-width: 100%; margin: 0.5rem auto; }
-        .cinema-cta-content .title-image-wrap img { width: 100%; max-width: 240px; margin: 0 auto; }
         .cinema-cta-content .release-line { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); margin-bottom: 1rem; }
         .cinema-cta-content .btn { min-width: 200px; padding: 0.7rem 1.5rem; font-size: 0.7rem; }
         .cinema-cta-content .distributed-by { font-size: 0.6rem; color: rgba(244, 232, 208, 0.5); margin-top: 0.75rem; }
 
         /* ===== FOOTER ===== */
         .footer { background: #050506; text-align: center; padding: 1.5rem 1.25rem; border-top: 1px solid rgba(212, 167, 44, 0.08); }
-        .footer-wordmark { max-width: 110px; margin: 0 auto 0.5rem; opacity: 0.9; }
+        .footer-logo { height: 32px; width: auto; object-fit: contain; margin: 0 auto 0.75rem; }
         .footer-credit { font-size: 0.6rem; color: rgba(244, 232, 208, 0.5); letter-spacing: 0.04em; line-height: 1.6; }
 
         /* ===== MODAL ===== */
@@ -307,14 +300,13 @@
 
         /* ===== DESKTOP ENHANCEMENTS ===== */
         @media (min-width: 768px) {
-            :root { --section-padding: 5rem 2rem; --topbar-h: 56px; }
+            :root { --section-padding: 5rem 2rem; --topbar-h: 60px; }
             .topbar { padding: 0 2rem; }
-            .topbar-brand { font-size: 0.78rem; }
+            .topbar-logo { height: 32px; }
             .topbar-date { font-size: 0.65rem; }
             .topbar-cta { font-size: 0.65rem; padding: 0.5rem 1.1rem; }
 
-            /* hero becomes side-by-side */
-            .hero { padding: 3rem 2rem; min-height: calc(100vh - var(--topbar-h)); min-height: calc(100svh - var(--topbar-h)); display: flex; align-items: center; }
+            .hero { padding: 3rem 2rem; }
             .hero-grid {
                 flex-direction: row;
                 max-width: var(--max-width);
@@ -329,9 +321,8 @@
                 flex-shrink: 0;
             }
             .hero-poster {
-                width: 340px;
+                width: 380px;
                 max-width: 100%;
-                aspect-ratio: 3/4;
             }
             .hero-content {
                 order: 1;
@@ -341,7 +332,6 @@
                 flex: 1;
                 max-width: 520px;
             }
-            .hero-content .title-image-wrap img { max-width: 340px; margin-left: 0; }
             .hero-tagline { font-size: 1.15rem; }
             .hero-release-line { align-items: flex-start; }
             .hero-cta-group { flex-direction: row; max-width: 420px; justify-content: flex-start; }
@@ -362,8 +352,7 @@
 
         @media (min-width: 1024px) {
             :root { --section-padding: 6rem 2.5rem; }
-            .hero-poster { max-width: 380px; }
-            .hero-content .title-image-wrap img { max-width: 380px; }
+            .hero-poster { max-width: 420px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -380,19 +369,18 @@
 
     <h1 class="visually-hidden">A Father's Secret</h1>
 
-    <!-- ==================== TOP BAR ==================== -->
+    <!-- ==================== TOP BAR (small logo) ==================== -->
     <header class="topbar">
-        <span class="topbar-brand">A Father's Secret</span>
+        <img class="topbar-logo" src="title.png" alt="A Father's Secret">
         <div class="topbar-meta">
             <span class="topbar-date">Aug 21 &middot; In Cinemas</span>
             <a href="#" class="topbar-cta cta-ticket" id="cta-ticket-topbar" data-gtm="cta-ticket-topbar">Watch</a>
         </div>
     </header>
 
-    <!-- ==================== HERO SECTION (clean flow) ==================== -->
+    <!-- ==================== HERO SECTION (poster only) ==================== -->
     <section class="hero" id="hero">
         <div class="hero-grid">
-            <!-- Poster (first on mobile) -->
             <div class="hero-poster-wrap">
                 <div class="hero-poster">
                     <picture>
@@ -401,11 +389,7 @@
                     </picture>
                 </div>
             </div>
-            <!-- Content (second on mobile) -->
             <div class="hero-content">
-                <div class="title-image-wrap">
-                    <img src="title.png" alt="A Father's Secret" width="1200" height="694">
-                </div>
                 <p class="hero-tagline">The lie was ten years ago.<br>The truth walks back in today.</p>
                 <div class="hero-release-line">
                     <span class="hero-release-text">In Cinemas August 21st</span>
@@ -591,19 +575,16 @@
         <div class="cinema-cta-content">
             <h2>See It In Cinemas</h2>
             <p class="lead">Grab your seat. This is the one everyone's going to be talking about.</p>
-            <div class="title-image-wrap">
-                <img src="title.png" alt="A Father's Secret" width="1200" height="694">
-            </div>
             <div class="release-line">In cinemas August 21st</div>
             <a href="#" class="btn btn-gold cta-ticket" id="cta-ticket-final" data-gtm="cta-ticket-final">Watch At Cinema</a>
             <p class="distributed-by">Distributed by Cinemax</p>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER (small logo) ==================== -->
     <footer class="footer">
         <div class="container">
-            <img class="footer-wordmark" src="title.png" alt="A Father's Secret">
+            <img class="footer-logo" src="title.png" alt="A Father's Secret">
             <div class="footer-credit">
                 A film by Adeoluwa Owu &nbsp;&bull;&nbsp; Produced by Switch Visuals Production &nbsp;&bull;&nbsp; Distributed by Cinemax
             </div>
