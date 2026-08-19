@@ -144,7 +144,7 @@
             min-height: calc(100vh - var(--topbar-h));
             min-height: calc(100svh - var(--topbar-h));
             display: flex;
-            align-items: flex-end; /* content at bottom? better center */
+            align-items: flex-end;
             justify-content: center;
             padding: 1.5rem 1.25rem 2rem;
             background: var(--bg);
@@ -359,7 +359,7 @@
             .hero-grid { flex-direction: row; gap: 3rem; align-items: center; }
             .hero-poster-wrap { position: relative; inset: auto; width: auto; height: auto; z-index: 1; }
             .hero-poster { width: 340px; max-width: 100%; aspect-ratio: 3/4; border-radius: 10px; border: 1px solid rgba(212,167,44,0.18); box-shadow: 0 24px 50px -18px rgba(0,0,0,0.85), 0 8px 20px -8px rgba(0,0,0,0.7); }
-            .hero::after { background: none; } /* no overlay needed */
+            .hero::after { background: none; }
             .hero-content { order: 1; text-align: left; align-items: flex-start; flex: 1; max-width: 520px; }
             .hero-content .title-image-wrap img { max-width: 340px; margin-left: 0; filter: none; }
             .hero-tagline { font-size: 1.15rem; text-shadow: none; }
