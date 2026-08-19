@@ -11,13 +11,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Father's Secret | In Cinemas August 21st</title>
-    <meta name="description" content="A Father's Secret — The lie was ten years ago. The truth walks back in today. In cinemas August 21st.">
+    <meta name="description" content="A Father's Secret. The lie was ten years ago. The truth walks back in today. In cinemas August 21st.">
+
+    <!-- Open Graph / social share (replace yourdomain.com with your live URL) -->
+    <meta property="og:type" content="video.movie">
+    <meta property="og:title" content="A Father's Secret | In Cinemas August 21st">
+    <meta property="og:description" content="The lie was ten years ago. The truth walks back in today. In cinemas August 21st.">
+    <meta property="og:image" content="https://yourdomain.com/og-share.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Father's Secret | In Cinemas August 21st">
+    <meta name="twitter:description" content="The lie was ten years ago. The truth walks back in today. In cinemas August 21st.">
+    <meta name="twitter:image" content="https://yourdomain.com/og-share.jpg">
+    <meta name="theme-color" content="#0A0A0B">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
+            --bg: #0A0A0B;
             --gold: #D4A72C;
             --deep-gold: #B8860B;
             --red: #A70F12;
@@ -59,20 +74,24 @@
             overflow-x: hidden;
         }
 
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         h1, h2, h3, h4 {
             font-family: var(--font-heading);
             font-weight: 600;
             line-height: 1.25;
             letter-spacing: -0.01em;
             color: var(--white);
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 6vw, 3.8rem);
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            color: var(--gold);
-            text-shadow: 0 0 20px rgba(212, 167, 44, 0.15);
         }
 
         h2 {
@@ -318,7 +337,7 @@
         .hero-poster {
             width: 100%;
             max-width: 340px;
-            aspect-ratio: 2 / 3;
+            aspect-ratio: 3 / 4;
             border-radius: 10px;
             background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%);
             border: 1px solid var(--border-subtle);
@@ -327,36 +346,10 @@
             overflow: hidden;
         }
 
-        .poster-placeholder {
-            text-align: center;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .hero-poster img {
+            width: 100%;
             height: 100%;
-        }
-
-        .poster-placeholder .poster-title {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold);
-            opacity: 0.7;
-            margin-bottom: 0.5rem;
-        }
-
-        .poster-placeholder .poster-divider {
-            width: 40px;
-            height: 2px;
-            background: var(--red);
-            margin: 0.75rem auto;
-        }
-
-        .poster-placeholder .poster-tag {
-            font-size: 0.8rem;
-            font-style: italic;
-            color: var(--cream);
-            opacity: 0.5;
+            object-fit: cover;
         }
 
         /* ===== STORY SECTION ===== */
@@ -501,6 +494,13 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .cast-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .cast-initials {
@@ -911,24 +911,23 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- SEO / accessibility: real page heading (title art is an image) -->
+    <h1 class="visually-hidden">A Father's Secret</h1>
+
     <!-- ==================== HERO SECTION ==================== -->
     <section class="hero" id="hero">
         <div class="hero-grid">
             <div class="hero-poster-wrap">
                 <div class="hero-poster">
-                    <!-- Replace with actual poster image -->
-                    <!-- <img src="[POSTER_IMAGE_URL]" alt="A Father's Secret — Official Poster" style="width:100%;height:100%;object-fit:cover;"> -->
-                    <div class="poster-placeholder">
-                        <div class="poster-title">A FATHER'S<br>SECRET</div>
-                        <div class="poster-divider"></div>
-                        <div class="poster-tag">Official Poster</div>
-                    </div>
+                    <picture>
+                        <source srcset="poster.webp" type="image/webp">
+                        <img src="poster.jpg" alt="A Father's Secret official movie poster">
+                    </picture>
                 </div>
             </div>
             <div class="hero-content">
                 <div class="title-image-wrap">
-                    <!-- Replace with your transparent PNG title (1920x1080) -->
-                    <img src="[TITLE_PNG_URL]" alt="A Father's Secret — Title">
+                    <img src="title.png" alt="A Father's Secret" width="1200" height="694">
                 </div>
                 <p class="hero-tagline">
                     The lie was ten years ago.<br>
@@ -936,7 +935,7 @@
                 </p>
                 <div class="hero-release-line">
                     <span class="hero-release-text">In Cinemas August 21st</span>
-                    <div class="countdown" id="countdown">
+                    <div class="countdown" id="countdown" aria-live="polite">
                         <span id="countdown-days">00</span>d :
                         <span id="countdown-hours">00</span>h :
                         <span id="countdown-minutes">00</span>m :
@@ -944,7 +943,7 @@
                     </div>
                 </div>
                 <p class="hero-description">
-                    A woman who fought her way out of heartbreak and hardship has built a new life for herself — until the sudden return of the father who disappeared years ago threatens everything she's painstakingly built.
+                    A woman who fought her way out of heartbreak and hardship has finally built a life of her own. Then the father who vanished years ago walks back in, and everything she rebuilt starts to come undone.
                 </p>
                 <div class="hero-cta-group">
                     <a href="#" class="btn btn-gold cta-ticket" id="cta-ticket-hero" data-gtm="cta-ticket-hero">
@@ -965,7 +964,7 @@
             <h2>Some secrets don't stay buried.</h2>
             <div class="gold-divider center"></div>
             <p class="story-body">
-                A Father's Secret tells the gripping story of a woman who fought her way out of heartbreak and hardship, only for the sudden return of the father who disappeared years ago to threaten the life she's painstakingly built.
+                A Father's Secret follows a woman who clawed her way past heartbreak and hardship to build something stable of her own. When the father who disappeared years ago suddenly resurfaces, the life she fought so hard for begins to unravel.
             </p>
             <div class="story-info-row">
                 <div class="story-info-item">
@@ -1014,7 +1013,7 @@
             <div class="cast-grid">
                 <div class="cast-card">
                     <div class="cast-card-image">
-                        <!-- Replace: <img src="[TIMINI_IMAGE_URL]" alt="Timini Egbuson" style="width:100%;height:100%;object-fit:cover;"> -->
+                        <!-- Replace with portrait: <img src="timini.jpg" alt="Timini Egbuson"> -->
                         <span class="cast-initials">TE</span>
                     </div>
                     <div class="cast-card-info">
@@ -1024,21 +1023,21 @@
                 </div>
                 <div class="cast-card">
                     <div class="cast-card-image">
-                        <!-- Replace: <img src="[DIVA_GOLD_IMAGE_URL]" alt="Diva Gold" style="width:100%;height:100%;object-fit:cover;"> -->
-                        <span class="cast-initials">DG</span>
+                        <!-- Replace with portrait: <img src="olukemi-gold-aluko.jpg" alt="Olukemi Gold Aluko"> -->
+                        <span class="cast-initials">OG</span>
                     </div>
                     <div class="cast-card-info">
-                        <div class="cast-name">Diva Gold</div>
+                        <div class="cast-name">Olukemi Gold Aluko</div>
                         <span class="cast-role-label">Starring</span>
                     </div>
                 </div>
                 <div class="cast-card">
                     <div class="cast-card-image">
-                        <!-- Replace: <img src="[BRYAN_OKOYE_IMAGE_URL]" alt="Bryan Okoye" style="width:100%;height:100%;object-fit:cover;"> -->
-                        <span class="cast-initials">BO</span>
+                        <!-- Replace with portrait: <img src="bryan-boomba.jpg" alt="Bryan Boomba"> -->
+                        <span class="cast-initials">BB</span>
                     </div>
                     <div class="cast-card-info">
-                        <div class="cast-name">Bryan Okoye</div>
+                        <div class="cast-name">Bryan Boomba</div>
                         <span class="cast-role-label">Starring</span>
                     </div>
                 </div>
@@ -1053,16 +1052,14 @@
             <div class="gold-divider center"></div>
             <div class="full-cast-grid">
                 <span class="full-cast-name">Timini Egbuson</span>
-                <span class="full-cast-name">Diva Gold</span>
-                <span class="full-cast-name">Bryan Okoye</span>
-                <span class="full-cast-name">Fae Olumide</span>
-                <span class="full-cast-name">Princess Model</span>
+                <span class="full-cast-name">Olukemi Gold Aluko</span>
+                <span class="full-cast-name">Bryan Boomba</span>
+                <span class="full-cast-name">Nkwocha Princess</span>
                 <span class="full-cast-name">Odunlade Adekola</span>
                 <span class="full-cast-name">Remi Surutu</span>
-                <span class="full-cast-name">Motolani Odobodobo</span>
-                <span class="full-cast-name">Emgolden</span>
-                <span class="full-cast-name">Joseph Oni</span>
-                <span class="full-cast-name">Koko Hanson</span>
+                <span class="full-cast-name">Fadekemi Olumide</span>
+                <span class="full-cast-name">Tolani Odobs</span>
+                <span class="full-cast-name">Emeka Golden</span>
             </div>
         </div>
     </section>
@@ -1078,18 +1075,34 @@
                     <span class="credits-value">Adeoluwa Owu</span>
                 </div>
                 <div class="credits-item">
-                    <span class="credits-label">Director</span>
-                    <span class="credits-value">Captain Degzy</span>
+                    <span class="credits-label">Written By</span>
+                    <span class="credits-value">Moshood Yakubu Olawale</span>
                 </div>
                 <div class="credits-item">
+                    <span class="credits-label">Produced By</span>
+                    <span class="credits-value">Damilola Osikoya</span>
+                </div>
+                <div class="credits-item">
+                    <span class="credits-label">Director of Photography</span>
+                    <span class="credits-value">Henry King</span>
+                </div>
+                <div class="credits-item">
+                    <span class="credits-label">Editor</span>
+                    <span class="credits-value">Ajala Adedayo</span>
+                </div>
+                <div class="credits-item">
+                    <span class="credits-label">Music</span>
+                    <span class="credits-value">Tolu Obanro</span>
+                </div>
+                <div class="credits-item" style="grid-column:1/-1;">
                     <span class="credits-label">Executive Producers</span>
-                    <span class="credits-value small-list">Dami · Odunlade Adekola · Ope Ajayi · Diva Gold</span>
+                    <span class="credits-value small-list">Damilola Osikoya &middot; Olukemi Gold Aluko &middot; Odunlade Adekola &middot; Ope Ajayi</span>
                 </div>
                 <div class="credits-item">
                     <span class="credits-label">Production</span>
                     <span class="credits-value">Switch Visuals Production</span>
                 </div>
-                <div class="credits-item" style="grid-column:1/-1;">
+                <div class="credits-item">
                     <span class="credits-label">Distributed By</span>
                     <span class="credits-value">Cinemax</span>
                 </div>
@@ -1102,7 +1115,7 @@
         <div class="cinema-cta-content">
             <h2>See It In Cinemas</h2>
             <div class="title-image-wrap">
-                <img src="[TITLE_PNG_URL]" alt="A Father's Secret">
+                <img src="title.png" alt="A Father's Secret" width="1200" height="694">
             </div>
             <div class="release-line">In cinemas August 21st</div>
             <a href="#" class="btn btn-gold cta-ticket" id="cta-ticket-final" data-gtm="cta-ticket-final">
@@ -1135,10 +1148,10 @@
         <div class="container">
             <div class="footer-title">A Father's Secret</div>
             <div class="footer-credit">
-                A film by Adeoluwa Owu &nbsp;•&nbsp; Produced by Switch Visuals Production &nbsp;•&nbsp; Distributed by Cinemax
+                A film by Adeoluwa Owu &nbsp;&bull;&nbsp; Produced by Switch Visuals Production &nbsp;&bull;&nbsp; Distributed by Cinemax
             </div>
             <div class="footer-copyright">
-                © 2026 A Father's Secret. All rights reserved.
+                &copy; 2026 A Father's Secret. All rights reserved.
             </div>
         </div>
     </footer>
@@ -1175,8 +1188,8 @@
             // Page view
             pushEvent('page_view', { page_title: 'A Father\'s Secret | Landing Page', page_path: window.location.pathname });
 
-            // Countdown Timer
-            var releaseDate = new Date('2026-08-21T00:00:00Z').getTime();
+            // Countdown Timer (Lagos local time, UTC+1)
+            var releaseDate = new Date('2026-08-21T00:00:00+01:00').getTime();
             function updateCountdown() {
                 var now = new Date().getTime();
                 var distance = releaseDate - now;
@@ -1218,6 +1231,7 @@
             // YouTube IFrame API
             var player = null;
             var trailerPlayTracked = false;
+            var trailerCompletedTracked = false;
             var progressTracked = { 25: false, 50: false, 75: false };
             var progressInterval = null;
             var videoId = 'esJdD2VtOG0';
@@ -1236,16 +1250,21 @@
                 });
             };
 
+            function markCompleted() {
+                if (trailerCompletedTracked) return;
+                trailerCompletedTracked = true;
+                pushEvent('trailer_completed');
+                if (progressInterval) clearInterval(progressInterval);
+            }
+
             function onPlayerStateChange(event) {
                 if (event.data === YT.PlayerState.PLAYING && !trailerPlayTracked) {
                     trailerPlayTracked = true;
                     pushEvent('trailer_play');
-                    progressTracked = { 25: false, 50: false, 75: false };
                     startProgressTracking();
                 }
                 if (event.data === YT.PlayerState.ENDED) {
-                    pushEvent('trailer_completed');
-                    if (progressInterval) clearInterval(progressInterval);
+                    markCompleted();
                 }
                 if (event.data === YT.PlayerState.PAUSED) {
                     if (progressInterval) clearInterval(progressInterval);
@@ -1263,11 +1282,7 @@
                             if (percent >= 25 && !progressTracked[25]) { progressTracked[25] = true; pushEvent('trailer_25_percent'); }
                             if (percent >= 50 && !progressTracked[50]) { progressTracked[50] = true; pushEvent('trailer_50_percent'); }
                             if (percent >= 75 && !progressTracked[75]) { progressTracked[75] = true; pushEvent('trailer_75_percent'); }
-                            if (percent >= 99 && !progressTracked.completed) {
-                                progressTracked.completed = true;
-                                pushEvent('trailer_completed');
-                                clearInterval(progressInterval);
-                            }
+                            if (percent >= 99) { markCompleted(); }
                         }
                     }
                 }, 500);
